@@ -4,11 +4,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 import utils
 class STN(nn.Module):
-    def __init__(self, n_dim = 3, n_scales = 1, n_points = 500, sym_op = 'max', quaternion = False) -> None:
+    def __init__(self, n_dim = 3, n_scales = 1, n_points = 500, quaternion = False) -> None:
         super(STN, self).__init__()
         self.n_dim = n_dim
         self.n_scales = n_scales
-        self.sym_op = sym_op
         self.n_points = n_points
         self.quaternion = quaternion
 
