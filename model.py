@@ -84,7 +84,7 @@ class PointNet(nn.Module):
         
         if self.n_scales == 1:
             if self.sym_op == 'max':
-                x = self.mp1(x)
+                x = self.max_pool(x)
             else:
                 raise ValueError('Unsupported symmetric operation: %s' % (self.sym_op))
         else:
